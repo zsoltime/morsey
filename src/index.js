@@ -12,6 +12,10 @@ export default class Morse {
       },
       options
     );
+
+    if (hasDuplicateValues(this.options)) {
+      throw new Error('Options must have unique values');
+    }
   }
 
   digitsToMarks(digits) {
@@ -31,10 +35,6 @@ export default class Morse {
   }
 
   encode(text) {
-    if (hasDuplicateValues(this.options)) {
-      throw new Error('Options must have unique values');
-    }
-
     return text
       .split('')
       .map(letter =>
@@ -45,10 +45,6 @@ export default class Morse {
   }
 
   decode(code) {
-    if (hasDuplicateValues(this.options)) {
-      throw new Error('Options must have unique values');
-    }
-
     return code
       .split(this.options.wordspace)
       .map(word =>
