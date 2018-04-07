@@ -44,7 +44,5 @@
     "webpack": "^4.5.0",
     "webpack-cli": "^2.0.14"
   },
-  "dependencies": {
-    "lodash.invert": "^4.3.0"
-  }
+  "dependencies": {}
 }
