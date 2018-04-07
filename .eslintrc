@@ -1,0 +1,34 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true,
+    "jest": true,
+    "node": true
+  },
+  "extends": "airbnb-base",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "modules": true
+    }
+  },
+  "rules": {
+    "comma-dangle": [
+      "error",
+      {
+        "arrays": "always-multiline",
+        "exports": "always-multiline",
+        "functions": "ignore",
+        "imports": "always-multiline",
+        "objects": "always-multiline"
+      }
+    ],
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": ["*.test.js"]
+      }
+    ],
+    "max-len": "off",
+    "no-param-reassign": ["error", { "props": false }]
+  }
+}

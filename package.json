@@ -1,0 +1,50 @@
+{
+  "name": "morsey",
+  "version": "0.1.0",
+  "description": "Encode and decode Morse code",
+  "main": "dist/index.js",
+  "files": [
+    "dist/index.js"
+  ],
+  "scripts": {
+    "build": "webpack --mode=production",
+    "dev": "webpack -w --mode=development",
+    "lint": "eslint src test",
+    "prepublishOnly": "npm run build",
+    "release": "np",
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zsoltime/morsey.git"
+  },
+  "keywords": [
+    "morse",
+    "decode",
+    "encode",
+    "morse code",
+    "morse encoder",
+    "morse decoder"
+  ],
+  "author": "Zsolt Meszaros",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zsoltime/morsey/issues"
+  },
+  "homepage": "https://github.com/zsoltime/morsey#readme",
+  "devDependencies": {
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.6.1",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.10.0",
+    "jest": "^22.4.3",
+    "np": "^2.20.1",
+    "webpack": "^4.5.0",
+    "webpack-cli": "^2.0.14"
+  },
+  "dependencies": {
+    "lodash.invert": "^4.3.0"
+  }
+}
